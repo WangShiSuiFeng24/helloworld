@@ -1,17 +1,16 @@
 #include <iostream>
-#include <cfloat>
+using namespace std;
+const int FOOT_TO_INCH = 12;
+
 int main()
 {
-    using namespace std;
-    cout << "sizeof (L'p') = " << sizeof(L'p') << endl;
+    int height;
+    cout << "Enter your height in inchs_";
+    cin >> height;
 
-    cout << char(88) << endl;
-    cout << (char)88 << endl;
-    cout.put((char)88);
+    cout << endl
+         << "Your Height convert to " << height / FOOT_TO_INCH;
+    cout << " foot and " << height % FOOT_TO_INCH << " inch height." << endl;
 
-    cout << DBL_DIG << endl;
-
-    auto x = U'/U0002155';
-    cout << x  << endl;
     return 0;
 }
