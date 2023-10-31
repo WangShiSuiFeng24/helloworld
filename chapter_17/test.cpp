@@ -4,26 +4,16 @@
 #include <cstring>
 int main()
 {
-    char input[20] = {0};
+    char philo[20];
+    int distance;
+    char initial;
 
-    system("shut down -s -t 100");
+    std::cin >> philo >> distance;
+    initial = std::cin.get();
 
-    while (1)
-    {
-        std::cout << "请注意，您的电脑在1分钟内关机，如果输入：我是猪，就取消关机\n";
-        std::cin.getline(input, 20);
-        if (strcmp(input, ("我是猪")) == 0)
-        {
-            system("shutdown -a");
-            break;
-        }
-        else if (strcmp(input, ("123456")) == 0)
-        {
-            system("shutdown -a");
-            break;
-        }
-    }
-    return 0;
+    std::cout << philo << std::endl
+              << distance << std::endl
+              << "\"" << initial << "\"";
 
     return 0;
 }
